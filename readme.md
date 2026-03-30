@@ -1,20 +1,32 @@
-# dci-cleanup
+# <p align="center">🧹 dci-cleanup</p>
 
-A Python tool to find and leave inactive Discord servers. It scans all servers your account is in, identifies ones where you haven’t sent a message in a configurable number of days, and lets you choose which ones to leave — one by one.
+<p align="center">
+  <img src="https://readme-typing-svg.herokuapp.com?font=Fira+Code&pause=1000&color=38BDF8&center=true&vCenter=true&width=500&lines=Discord+Server+Cleanup+Tool;Scan+%7C+Review+%7C+Leave;Declutter+Your+Discord+Account;Built+by+DCI+Studios" />
+</p>
 
-## Features
+-----
 
-- Scans all your Discord servers for inactivity
-- Configurable inactivity threshold (default: 30 days)
-- Interactive prompt — you decide which servers to leave
-- Shows live progress and last activity date during scanning
+## 👋 What is dci-cleanup?
 
-## Requirements
+**dci-cleanup** is a lightweight Python tool that scans all Discord servers your account is in, identifies ones you’ve been inactive in, and lets you leave them — one by one, interactively.
 
-- Python 3.8+
-- A Discord user token (not a bot token)
+> ⚠️ This tool uses a **Discord user token**, not a bot token. Use responsibly and at your own risk. Self-bots violate Discord’s Terms of Service.
 
-## Installation
+-----
+
+## ⚙️ Features
+
+- 🔍 Scans all servers for inactivity
+- ⏱ Configurable inactivity threshold (default: 30 days)
+- 🖱 Interactive prompt — you choose which servers to leave
+- 📅 Displays last activity date per server
+- 📡 Live scan progress shown in status
+
+-----
+
+## 🚀 Getting Started
+
+### Installation
 
 ```bash
 git clone https://github.com/dcistudios/dci-cleanup.git
@@ -22,9 +34,7 @@ cd dci-cleanup
 pip install -r requirements.txt
 ```
 
-## Configuration
-
-Copy the example env file and fill in your values:
+### Configuration
 
 ```bash
 cp .env.example .env
@@ -37,18 +47,20 @@ DISCORD_TOKEN=your_discord_token_here
 INACTIVE_DAYS=30
 ```
 
-- `DISCORD_TOKEN` — Your Discord user token
-- `INACTIVE_DAYS` — Number of days without activity before a server is considered inactive (default: `30`)
+|Variable       |Description                                   |Default |
+|---------------|----------------------------------------------|--------|
+|`DISCORD_TOKEN`|Your Discord user token                       |Required|
+|`INACTIVE_DAYS`|Days without activity before flagging a server|`30`    |
 
-> ⚠️ **Never share your Discord token.** It gives full access to your account. Keep your `.env` file out of version control (it’s already in `.gitignore`).
+-----
 
-## Usage
+## 🖥 Usage
 
 ```bash
 python discord_cleanup.py
 ```
 
-Or use the provided shell script:
+Or via the shell script:
 
 ```bash
 bash clean.sh
@@ -57,20 +69,75 @@ bash clean.sh
 The tool will:
 
 1. Log in and scan all your servers
-1. Flag any server where you haven’t sent a message within the configured period
+1. Flag servers where you haven’t sent a message within the threshold
 1. Prompt you for each inactive server: `Would you like to leave? (y/n)`
 1. Leave the ones you confirm
 
-## How to Get Your Discord Token
+-----
+
+## 🔑 How to Get Your Discord Token
 
 1. Open Discord in your browser
 1. Press `F12` to open DevTools
 1. Go to the **Network** tab and filter by `api`
-1. Send a message or perform any action
-1. Look for a request and find the `Authorization` header in the request headers — that’s your token
+1. Perform any action (send a message, switch channels)
+1. Find a request and copy the `Authorization` header value
 
-> Use this at your own risk. Self-bots violate Discord’s Terms of Service. This tool is intended for personal cleanup only.
+> 🔐 Never share your token. It grants full access to your account.
 
-## License
+-----
 
-MIT
+## 🧠 Tech Stack
+
+<p align="center">
+  <img src="https://skillicons.dev/icons?i=py,linux,github" />
+</p>
+
+```
+Python
+discord.py
+python-dotenv
+Shell
+```
+
+-----
+
+## 🌐 Official Links
+
+<p align="center">
+  <a href="https://dcistudios.xyz">
+    <img src="https://img.shields.io/badge/DCI_Studios-Website-38BDF8?style=for-the-badge" />
+  </a>
+  <a href="https://hosting.dcistudios.xyz">
+    <img src="https://img.shields.io/badge/DCI_Hosting-Infrastructure-0EA5E9?style=for-the-badge" />
+  </a>
+  <a href="https://forums.dcistudios.xyz">
+    <img src="https://img.shields.io/badge/DCI_Forums-Community-8B5CF6?style=for-the-badge" />
+  </a>
+  <a href="https://thecarter.xyz">
+    <img src="https://img.shields.io/badge/Carter-Portfolio-6366F1?style=for-the-badge" />
+  </a>
+</p>
+
+-----
+
+## 📬 Contact
+
+<p align="center">
+  <a href="mailto:developer@dcistudios.xyz">
+    <img src="https://img.shields.io/badge/Email-developer@dcistudios.xyz-D14836?style=flat-square&logo=gmail&logoColor=white" />
+  </a>
+</p>
+
+-----
+
+## 👑 Leadership
+
+**Owner & Founder:** Carter  
+**Organization:** DCI Studios
+
+-----
+
+<p align="center">
+<b>DCI Studios — Architecting Excellence.</b>
+</p>
